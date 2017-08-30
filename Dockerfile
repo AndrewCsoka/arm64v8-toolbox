@@ -16,6 +16,8 @@ RUN apk add \
     htop \
     iftop \
     iotop \
+    iproute2 \
+    iproute2-bash-completion \
     iptables \
     jq \
     less \
@@ -23,6 +25,7 @@ RUN apk add \
     lsof \
     nano \
     net-tools \
+    netcat-openbsd \
     ngrep \
     nmap \
     openssl \
@@ -32,6 +35,7 @@ RUN apk add \
     sysstat \
     tar \
     tcpdump \
+    tcptraceroute \
     tmux \
     vim \
     wget \
