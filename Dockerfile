@@ -1,4 +1,4 @@
-FROM arm64v8/alpine:3.5
+FROM arm64v8/alpine:3.6
 
 MAINTAINER Andrew Csoka <andy@andrewcsoka.com>
 
@@ -14,7 +14,6 @@ RUN apk add \
     git \
     gzip \
     htop \
-    heimdal-telnet \
     iftop \
     iotop \
     iptables \
@@ -27,6 +26,7 @@ RUN apk add \
     ngrep \
     nmap \
     openssl \
+    perl-net-telnet \
     strace \
     supervisor \
     sysstat \
