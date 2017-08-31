@@ -1,44 +1,59 @@
-FROM arm64v8/alpine:3.6
+FROM debian:stretch
 
 MAINTAINER Andrew Csoka <andy@andrewcsoka.com>
 
-RUN apk update
+RUN set -x \
+    && apt-get update && apt-get install -y --no-install-recommends \
+        apt-transport-https \
+#        bash-completion \
+#        conntrack \
+#        curl \
+#        dnsutils \
+#        ethtool \
+#        git \
+#        gzip \
+#        htop \
+#        htpdate \
+#        iftop \
+#        iotop \
+#        iproute \
+#        iptables \
+#        less \
+#        lsof \
+#        make \
+#        nano \
+#        net-tools \
+#        netcat \
+#        ngrep \
+#        nmap \
+#        ntpdate \
+#        openssh-client \
+#        openssl \
+#        rsync \
+#        sendemail \
+#        strace \
+#        sysstat \
+#        tar \
+#        tcpdump \
+#        telnet \
+#        time \
+#        tmux \
+#        traceroute \
+#        tree \
+#        vim \
+#        wget \
+#
+## docker cli
+#RUN set -x \
+#    && apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys "9DC858229FC7DD38854AE2D88D81803C0EBFCD88" \
+##    && echo "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" > /etc/apt/sources.list.d/docker.list \
+#    && echo "deb [arch=aarch64] https://download.docker.com/linux/debian stretch stable" > /etc/apt/sources.list.d/docker.list \
+#    && apt-get update && apt-get install -y --no-install-recommends \
+#        docker-ce \
+##    && usermod -a -G docker root \
+#    && rm -rf /usr/bin/docker-* /usr/bin/dockerd \
+#    && rm -rf /var/lib/apt/lists/*
 
-RUN apk upgrade
+WORKDIR "/storage"
 
-RUN apk add \
-    bash \
-    bash-completion \
-    curl \
-    diffutils \
-    git \
-    gzip \
-    htop \
-    iftop \
-    iotop \
-    iproute2 \
-    iproute2-bash-completion \
-    iptables \
-    jq \
-    less \
-    logrotate \
-    lsof \
-    make \
-    nano \
-    net-tools \
-    netcat-openbsd \
-    ngrep \
-    nmap \
-    openssh-client \
-    openssl \
-    perl-net-telnet \
-    strace \
-    supervisor \
-    sysstat \
-    tar \
-    tcpdump \
-    tcptraceroute \
-    tmux \
-    tree \
-    vim \
-    wget \
+CMD ["/bin/bash"]
