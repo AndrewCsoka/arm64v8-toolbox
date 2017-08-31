@@ -5,12 +5,14 @@ MAINTAINER Andrew Csoka <andy@andrewcsoka.com>
 RUN set -x \
     && apt-get update && apt-get install -y --no-install-recommends \
         apt-transport-https \
+        apt-utils \
         bash-completion \
         conntrack \
         curl \
         dnsutils \
         ethtool \
         git \
+        gnupg2 \
         gzip \
         htop \
         htpdate \
