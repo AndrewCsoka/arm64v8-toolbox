@@ -4,47 +4,61 @@ MAINTAINER Andrew Csoka <andy@andrewcsoka.com>
 
 RUN set -x \
     && apt-get update && apt-get install -y --no-install-recommends \
-        apt-transport-https \
-#        apt-utils \
-#        bash-completion \
-#        conntrack \
-#        curl \
+       apt-transport-https \
+        bash-completion \
+        ca-certificates \
+        conntrack \
+        curl \
+        diffutils \
         dirmngr \
-#        dnsutils \
-#        ethtool \
-#        git \
+        dmidecode \
+        dnsutils \
+        e2fsprogs \
+        ethtool \
+        git \
         gnupg2 \
-#        gzip \
-#        htop \
-#        htpdate \
-#        iftop \
-#        iotop \
-#        iproute \
-#        iptables \
-#        less \
-#        lsof \
-#        make \
-#        nano \
-#        net-tools \
-#        netcat \
-#        ngrep \
-#        nmap \
-#        ntpdate \
-#        openssh-client \
-#        openssl \
-#        rsync \
-#        sendemail \
-#        strace \
-#        sysstat \
-#        tar \
-#        tcpdump \
-#        telnet \
-#        time \
-#        tmux \
-#        traceroute \
-#        tree \
-#        vim \
-        wget
+        grc \
+        gzip \
+        htop \
+        htpdate \
+        iftop \
+        # iotop \
+        iproute \
+        iptables \
+        jq \
+        less \
+        lsof \
+        # logrotate \
+        mtr-tiny \
+        nano \
+        net-tools \
+        netcat \
+        ngrep \
+        # nmap \
+        # ntpdate \
+        openssh-client \
+        openssl \
+        pv \
+	procps \
+        psmisc \
+        redis-tools \
+        rsync \
+        sendemail \
+        strace \
+        sysstat \
+        tar \
+        tcpdump \
+        telnet \
+        time \
+        tmux \
+        traceroute \
+        vim \
+        # vim-tiny \
+        wget \
+        xfsprogs \
+    && mv /usr/sbin/tcpdump /usr/bin/tcpdump \
+    && rm -rf /usr/share/vim/vim80/doc/* /usr/share/vim/vim80/lang/* /usr/share/vim/vim80/spell/* /usr/share/vim/vim80/tutor/* \
+    && rm -rf /var/lib/apt/lists/*
 
 # docker cli
 RUN set -x \
