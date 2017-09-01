@@ -22,13 +22,13 @@ RUN apk add \
     jq \
     less \
     logrotate \
-    lscpu \
     lsof \
     nano \
     net-tools \
     netcat-openbsd \
     ngrep \
     nmap \
+    openssh-client \
     openssl \
     perl-net-telnet \
     strace \
