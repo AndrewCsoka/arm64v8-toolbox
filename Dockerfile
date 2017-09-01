@@ -22,6 +22,7 @@ RUN apk add \
     jq \
     less \
     logrotate \
+    lscpu \
     lsof \
     nano \
     net-tools \
@@ -37,5 +38,6 @@ RUN apk add \
     tcpdump \
     tcptraceroute \
     tmux \
+    tree \
     vim \
     wget \
