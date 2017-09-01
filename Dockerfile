@@ -23,6 +23,7 @@ RUN apk add \
     less \
     logrotate \
     lsof \
+    make \
     nano \
     net-tools \
     netcat-openbsd \
