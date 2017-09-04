@@ -42,3 +42,5 @@ RUN apk add \
     tree \
     vim \
     wget \
+
+ENV GIT_SSH_COMMAND ssh -i /storage/.ssh/LibreELECroot@odroid64
